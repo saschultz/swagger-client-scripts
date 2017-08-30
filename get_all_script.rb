@@ -7,7 +7,8 @@ body = SwaggerClient::Source # Source | All sources returned
 
 begin
   #returns all sources
-  api_instance.show_all_sources(body)
+  result = api_instance.show_all_sources(body)
+  p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling SourcesApi->show_all_sources: #{e}"
 end
